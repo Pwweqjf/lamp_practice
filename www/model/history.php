@@ -21,5 +21,5 @@ require_once MODEL_PATH . 'db.php';
     $sql .= ' GROUP BY
         history.history_id 
     ';
-    return execute_query($db,$sql,$arg);
+    return fetch_all_query($db,$sql,$arg);
 }

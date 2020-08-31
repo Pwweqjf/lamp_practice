@@ -21,5 +21,4 @@ if(is_logined() === false){
     }
   
 
-
   include_once VIEW_PATH . 'history_view.php';
