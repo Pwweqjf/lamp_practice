@@ -27,7 +27,10 @@
             <td><?php print h($data['history_id']); ?></td>
             <td><?php print h($data['create_datetime']); ?></td>
             <td><?php print(number_format($data['sum'])); ?>円</td>
-            <td>
+            <td><form action="purchase_detail.php">
+                    <input type="submit" value="詳細" class="btn btn-primary btn-block">
+                    <input type="hidden" name="history_id" value="<?php print($data['history_id']); ?>">
+                  </form></td>
             </td>
           </tr>
           <?php } ?>
