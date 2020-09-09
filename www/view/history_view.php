@@ -10,18 +10,9 @@
 
   <h1>購入履歴</h1>
   <div class="container">
-    
-  <form class="sort" action="index.php" style="text-align:right;">
-    <select name = 'sort'>
-      <option value = 'new'<?if($sort === 'new')echo 'selected';?>>新着順</option>
-      <option value = 'price_asc'<?if($sort === 'price_asc')echo 'selected';?>>価格の安い順</option>
-      <option value = 'price_desc'<?if($sort === 'price_desc')echo 'selected';?>>価格の高い順</option>
-    </select>
-    <input type="submit" value="並べ替え"/>
-  </form>
 
     <?php include VIEW_PATH . 'templates/messages.php'; ?>
-    
+
     <?php if(count($data) > 0){ ?>
       <table class="table table-bordered">
         <thead class="thead-light">
