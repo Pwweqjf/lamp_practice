@@ -12,8 +12,9 @@ if(is_logined() === false){
 
 $db = get_db_connect();
 $user = get_login_user($db);
+$sort = $_GET["sort"];
 
-$items = get_open_items($db);
+$items = get_open_items($db,$sort);
 
 $token = get_csrf_token();
 

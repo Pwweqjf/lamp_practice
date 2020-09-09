@@ -9,8 +9,17 @@
 <body>
   <?php include VIEW_PATH . 'templates/header_logined.php'; ?>
   
-
   <div class="container">
+
+  <form class="sort" action="index.php" style="text-align:right;">
+    <select name = 'sort'>
+      <option value = 'new'<?if($sort === 'new')echo 'selected';?>>新着順</option>
+      <option value = 'price_asc'<?if($sort === 'price_asc')echo 'selected';?>>価格の安い順</option>
+      <option value = 'price_desc'<?if($sort === 'price_desc')echo 'selected';?>>価格の高い順</option>
+    </select>
+    <input type="submit" value="並べ替え"/>
+  </form>
+  
     <h1>商品一覧</h1>
     <?php include VIEW_PATH . 'templates/messages.php'; ?>
 
