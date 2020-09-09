@@ -22,7 +22,7 @@ function get_item($db, $item_id){
   return fetch_query($db, $sql,[$item_id]);
 }
 
-function get_items($db,$sort = null, $is_open = false){
+function get_items($db,$sort = 'new', $is_open = false){
   $sql = '
     SELECT
       item_id, 
@@ -39,7 +39,7 @@ function get_items($db,$sort = null, $is_open = false){
       WHERE status = 1
     ';
   }
-  if($sort === 'new' ||$sort === null){
+  if($sort === 'new' ||empty($sort)){
     $sql .= '
     ORDER BY created desc
     ';
